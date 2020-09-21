@@ -1,0 +1,27 @@
+{
+  "name": "feature-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "feature-helper.js",
+  "scripts": {
+    "test": "jest",
+    "babel": "babel index.js -d lib",
+    "webpack": "webpack"
+  },
+  "keywords": [],
+  "author": "'Bhupendra <'bhupendraparihar@outlook.com'>",
+  "license": "'MIT'",
+  "dependencies": {
+    "@popperjs/core": "2.4.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.11.6",
+    "@babel/core": "7.11.6",
+    "@babel/plugin-transform-modules-umd": "7.10.4",
+    "@babel/preset-env": "7.11.5",
+    "babel-jest": "26.3.0",
+    "jest": "26.4.2",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12"
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            height: 200px;
+            width: 400px;
+            background-color: blueviolet;
+        }
+
+        #fh-tooltip {
+            background: #333;
+            color: white;
+            font-weight: bold;
+            padding: 4px 8px;
+            font-size: 13px;
+            border-radius: 4px;
+            display: block;
+            height: 50px;
+        }
+
+        #fh-tooltip[data-show] {
+            display: block;
+        }
+
+        #arrow,
+        #arrow::before {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            z-index: -1;
+        }
+
+        #arrow::before {
+            content: '';
+            transform: rotate(45deg);
+            background: #333;
+        }
+
+        #fh-tooltip[data-popper-placement^='top']>#arrow {
+            bottom: -4px;
+        }
+
+        #fh-tooltip[data-popper-placement^='bottom']>#arrow {
+            top: -4px;
+        }
+
+        #fh-tooltip[data-popper-placement^='left']>#arrow {
+            right: -4px;
+        }
+
+        #fh-tooltip[data-popper-placement^='right']>#arrow {
+            left: -4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">I am div1</div>
+    <button id="btn2">OK</button>
+    <script src="./lib/feature-helper.js"></script>
+    <script>
+        FH.default.init({
+            steps: [{
+                "selector": "#div1",
+                "message": "Click on div1"
+            },{
+                "selector":"#btn2",
+                "message": "click on button 2"
+            }]
+        });
+    </script>
+</body>
+
+</html>
